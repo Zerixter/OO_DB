@@ -8,8 +8,11 @@
 ## Objectius
 
 > Base de dades orientada a objectes amb taula Alumne i taula Notes.
+
 > La taula Alumne ha de tenir un procediment per obtenir la mitjana de les Notes
+
 > La taula Notes ha de tenir una referencia a la taula Alumnes.
+
 > Cal crear un procediment per obtenir la mitjana de les notes d'un alumne
 
 ## Tecnologies que es treballen
