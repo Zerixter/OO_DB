@@ -3,9 +3,7 @@
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 
-<!-- 
-Creacion del objeto Producto con una funcion que te calcula el precio total en base al precio unitario, la cantidad y el descuento
--->
+<!--Creacion del objeto Producto con una funcion que te calcula el precio total en base al precio unitario, la cantidad y el descuento-->
 ```sql
 CREATE
  OR replace TYPE producto AS OBJECT(
@@ -17,9 +15,7 @@ CREATE
 );
 /
 
-<!-- 
-Añadimos la funcion para que haga el calculo y te devuelva el total
--->
+<!-- Añadimos la funcion para que haga el calculo y te devuelva el total-->
 
 CREATE OR REPLACE TYPE body producto AS 
 	MEMBER function precio_total RETURN NUMBER IS 
@@ -28,23 +24,17 @@ CREATE OR REPLACE TYPE body producto AS
 		END;
 END;
 
-<!-- 
-Creamos la tabla de objetos (Productos)
--->
+<!-- Creamos la tabla de objetos (Productos)-->
 
 CREATE TABLE ticket OF producto;
 
-<!-- 
-Añadimos valores al objeto (producto) que esta dentro de la tabla ticket
--->
+<!-- Añadimos valores al objeto (producto) que esta dentro de la tabla ticket-->
 
 INSERT INTO ticket values(
 producto('Ñerds',50,2,99)
 );
 
-<!-- 
-Hacemos la select para mostrar todos los objetos (productos) con el calculo total
--->
+<!-- Hacemos la select para mostrar todos los objetos (productos) con el calculo total-->
 
 SELECT c.nombre, c.precio_total()  FROM TICKET c ;
 ```
