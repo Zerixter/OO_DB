@@ -2,6 +2,13 @@
 
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
+## Introducció
+#### Base de dades OO de productes. Disposem d'un objecte producte amb propietats : 
+* Nombre
+* Cantidad
+* Precio unitario
+* Descuento
+#### I el mètode 'precio_total', on calculem el preu total en base a la quantitat, el preu unitari i el descompte. Emmagatzem els productes en una taula d'objectes (ticket).
 
 <!--Creacion del objeto Producto con una funcion que te calcula el precio total en base al precio unitario, la cantidad y el descuento-->
 ```sql
