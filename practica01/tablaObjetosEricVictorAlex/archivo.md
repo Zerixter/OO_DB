@@ -25,7 +25,6 @@ CREATE OR replace TYPE producto AS OBJECT(
 	  descuento NUMBER(4,2) ,
 	  MEMBER FUNCTION precio_total RETURN NUMBER
 );
-/
 
 -- Añadimos la funcion para que haga el calculo y te devuelva el total 
 
