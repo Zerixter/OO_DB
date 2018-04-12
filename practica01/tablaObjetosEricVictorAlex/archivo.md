@@ -15,7 +15,9 @@
 
 ```sql
 
--- Creacion del objeto Producto con una funcion que te calcula el precio total en base al precio unitario, la cantidad y el descuento --
+-- 
+Creacion del objeto Producto con una funcion que te calcula el precio total en base al precio unitario,
+la cantidad y el descuento --
 
 CREATE OR replace TYPE producto AS OBJECT(
 	  nombre VARCHAR2(30),
