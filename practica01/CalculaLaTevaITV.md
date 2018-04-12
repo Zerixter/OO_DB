@@ -1,15 +1,17 @@
 # Authors : Jordi Besalú Colomer i Oriol Julià Brunet
 
 ## Introducció
-  ### La nostra bbdd calcula l'any en que un cotxe ha de passar la ITV a partir del seu any de matriculació i la data actual.
-  ##### Primer mirem l'antiguitat del cotxe. A partir d'aixó el separem en tres grups:
-  ###### -Entre 0 i 4 anys
-  ###### -Entre 4 i 10 anys
-  ###### -Mes de 10 anys
-  #### Un cop separat, retornem un data a partir de un sencill càlcul, on li sumem els anys depenent del grup.            
+   La nostra bbdd calcula l'any en que un cotxe ha de passar la ITV a partir del seu any de matriculació i la data actual.
+   Primer mirem l'antiguitat del cotxe. A partir d'aixó el separem en tres grups:
+      
+######      -Entre 0 i 4 anys
+######      -Entre 4 i 10 anys
+######      -Mes de 10 anys
+   
+   Un cop separat, retornem un data a partir de un sencill càlcul, on li sumem els anys depenent del grup.            
 
 ```sql
---Creem l'objecte Cotxe amb els seus atributs i funcions
+--Creem l'objecte Cotxe amb els seus propietats i mètodes
 CREATE OR REPLACE TYPE Cotxe AS OBJECT (
     Any_Matriculacio DATE,
     Ultim_Any_ITV DATE,
@@ -27,7 +29,7 @@ CREATE OR REPLACE TYPE BODY Cotxe AS
     BEGIN
         RETURN Matricula;
     END;
-    --Funcio calcula_any, on mirem l'any de la ITV
+    --Funcio calcula_any que retorna quin dia cal passar la ITV.
     MEMBER FUNCTION calcula_any RETURN DATE IS
     BEGIN
         DECLARE 
@@ -59,7 +61,7 @@ END;
 /
 
 
---Creem la taula cotxe a partir de l'objecte cotxe
+--Creem la taula d'objectes 'Cotxes' a partir de l'objecte 'Cotxe'
 CREATE TABLE Cotxes OF Cotxe;
 
 --Insertem dades
@@ -73,5 +75,5 @@ INSERT INTO Cotxes VALUES(
 '12/1/13', NULL, 'Nissan GTR','3333CCC');
 
 --Fem el select per veure els anys quan han de pasar la ITV
-SELECT c.ANY_MATRICULACIO, COALESCE(Ultim_Any_ITV, SYSDATE), c.calcula_any() FROM COTXES c; 
+SELECT c.ANY_MATRICULACIO, c.calcula_any() FROM COTXES c; 
 ```
