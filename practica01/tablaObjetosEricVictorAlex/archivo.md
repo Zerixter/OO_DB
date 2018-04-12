@@ -6,7 +6,7 @@
 <!-- 
 Creacion del objeto Producto con una funcion que te calcula el precio total en base al precio unitario, la cantidad y el descuento
 -->
-
+```sql
 CREATE
  OR replace TYPE producto AS OBJECT(
   nombre VARCHAR2(30),
@@ -47,7 +47,7 @@ Hacemos la select para mostrar todos los objetos (productos) con el calculo tota
 -->
 
 SELECT c.nombre, c.precio_total()  FROM TICKET c ;
-
+```
 
 
 
