@@ -8,7 +8,7 @@ Enunciat i resolució de problema amb una d'aquestes tècniques:
 * Taula clàssica amb columna tipus objecte
 * Taula d'objectes + Taula clàssica amb referència a la taula d'objectes
 
-Entrega a la carpeta [pràctica 1](./practica1).
+Entrega a la carpeta [pràctica 1](./practica01).
 
 ## Pràctica 2: 
 Coming soon
