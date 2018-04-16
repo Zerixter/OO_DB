@@ -50,5 +50,5 @@ INSERT INTO info_taxi VALUES(
 );
 
 SELECT * FROM info_taxi;
-
 ```
+![Select taxista](https://image.ibb.co/h215hS/selec_Taxista.png)
