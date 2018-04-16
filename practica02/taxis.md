@@ -4,13 +4,13 @@
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 ## Introducció
-#### Base de dades OO de taxistas. Disposem d'un objecte taxista amb propietats : 
+## Base de dades OO de taxistas. Disposem d'un objecte taxista amb propietats : 
 * Placa
 * Nombre
 * Telefono
 * Mail
-#### I la col·lecció 'Taxistas', on recopilarem tota la informacio dels taxistes.
-#### Emmagatzem els taxistes en una taula de col·leccions (info_taxi).
+## I la col·lecció 'Taxistas', on recopilarem tota la informacio dels taxistes.
+## Emmagatzem els taxistes en una taula de col·leccions (info_taxi).
 ```sql
 
 -- Creación del objeto taxista  
@@ -40,13 +40,15 @@ CREATE TABLE info_taxi (
 INSERT INTO info_taxi VALUES(
 	1010,
 	taxistas(taxista(10, 'Juan', 111111111, '@'),
-			 taxista(20, 'Alex', 222222222, '@'))
+		 taxista(20, 'Alex', 222222222, '@'))
 );
 
 INSERT INTO info_taxi VALUES(
 	2020,
 	taxistas(taxista(30, 'Pepe', 333333333, '@'),
-			 taxista(40, 'Eric', 444444444, '@'))
+		 taxista(40, 'Eric', 444444444, '@'))
 );
+
+SELECT * FROM info_taxi;
 
 ```
