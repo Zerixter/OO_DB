@@ -29,4 +29,7 @@
         SET cognoms = 'Supoku'
         WHERE nom = 'Hamza';
     END;
+    
+    -- Comprobació de que s'ha realitzat algun canvi
+    SELECT alumnes_column FROM daw2;
 ```
