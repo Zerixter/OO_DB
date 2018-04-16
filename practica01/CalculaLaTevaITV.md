@@ -3,10 +3,10 @@
 ## Introducció
    La nostra bbdd calcula l'any en que un cotxe ha de passar la ITV a partir del seu any de matriculació i la data actual.
    Primer mirem l'antiguitat del cotxe. A partir d'aixó el separem en tres grups:
-      
-######      -Entre 0 i 4 anys
-######      -Entre 4 i 10 anys
-######      -Mes de 10 anys
+   
+   * Entre 0 i 4 anys
+   * Entre 4 i 10 anys
+   * Mes de 10 anys
    
    Un cop separat, retornem un data a partir de un sencill càlcul, on li sumem els anys depenent del grup.            
 
