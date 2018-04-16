@@ -42,19 +42,19 @@ CREATE OR REPLACE TYPE BODY Cotxe AS
           matriculacioMes4 DATE := ADD_MONTHS(Any_Matriculacio, 48);
           matriculacioMes10 DATE := ADD_MONTHS(Any_Matriculacio, 120);
           
-          BEGIN
-            --Antiguitat entre 0 i 4 anys:
-            IF dataActual < matriculacioMes4 THEN 
-              RETURN matriculacioMes4;
-            END IF;
+        BEGIN
+          --Antiguitat entre 0 i 4 anys:
+          IF dataActual < matriculacioMes4 THEN 
+            RETURN matriculacioMes4;
+          END IF;
             
-           --Antiguitat entre 4 i 10 anys:
-           IF dataActual < matriculacioMes10 THEN 
-            RETURN ADD_MONTHS( aux_darrera_itv, 24);
-           END IF;
+          --Antiguitat entre 4 i 10 anys:
+          IF dataActual < matriculacioMes10 THEN 
+           RETURN ADD_MONTHS( aux_darrera_itv, 24);
+          END IF;
            
-           --Més de 10 anys:
-           RETURN ADD_MONTHS( aux_darrera_itv, 12);
+          --Més de 10 anys:
+          RETURN ADD_MONTHS( aux_darrera_itv, 12);
         END;
     END;
 END;
