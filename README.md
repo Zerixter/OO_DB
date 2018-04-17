@@ -16,3 +16,6 @@ Pensa i redacta un tipus col·lecció i declara'l. Després crea una taula que e
 
 Entrega a la carpeta [pràctica 2](./practica02).
 
+## Pràctica 3:
+
+Modifica la pràctica anterior per tal de fer [DML](https://docs.oracle.com/database/121/ADOBJ/adobjcol.htm#CIHJHIGG) sobre les col·leccions que heu creat. Entregueu la pràctica a la carpeta [pràctica 3](./practica03).
