@@ -49,6 +49,6 @@ INSERT INTO info_taxi VALUES(
 		 taxista(40, 'Eric', 444444444, '@'))
 );
 
-SELECT * FROM info_taxi;
+SELECT * FROM info_taxi t, TABLE(t.INFO_TAXISTA)
 ```
-![Select taxista](https://image.ibb.co/jBqhxS/select.png)
+![Select taxista](https://preview.ibb.co/cygpcS/select_2.png)
