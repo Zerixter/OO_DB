@@ -29,7 +29,18 @@
         SET cognoms = 'Supoku'
         WHERE nom = 'Hamza';
     END;
-    
-    -- Comprobació de que s'ha realitzat algun canvi
-    SELECT alumnes_column FROM daw2;
+
+    -- Update on el qual es canvia tota la colecció
+    BEGIN
+        UPDATE TABLE daw2
+        SET alumnes_column =
+        ALUMNES_TYP(
+            ALUMNE_TYP(10,'Cristian','Moraru','MAIL'),
+            ALUMNE_TYP(20,'Dani','Herrera','Mail')
+        )
+        WHERE group_no = 1;
+    END;
+
+    -- Select de la colecció
+    SELECT * FROM daw2 d, TABLE(d.alumnes_column) a;
 ```
